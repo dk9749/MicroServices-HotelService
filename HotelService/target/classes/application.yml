@@ -1,0 +1,23 @@
+server:
+  port: 8081
+  
+spring:
+  application:
+    name: Hotel-Service
+    
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8083/eureka
+      
+      
+# Okta authentication config
+okta:
+  oauth2:
+    issuer: https://dev-61716276.okta.com/oauth2/default
+    audience: api://default
